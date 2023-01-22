@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h1 style="text-align: center; text-decoration: underline;">My Rest</h1>
+    <div class="container-fluid">
+      <div class="row content">
+        <div class="col-sm-3 sidenav">
+            <h1 style="text-decoration: underline;">GET</h1>
+            <button onclick="run_me()" class="btn btn-dark">FIRE AJAX GET ALL</button>
+            <div>
+              <h1 style="text-decoration: underline;">Get by ID</h1>
+              <p>ID: <input type="number" id="txt_id" /></p>
+              <p>
+                <button type="button" onclick="getBYId()" class="btn btn-dark">
+                  GET
+                </button>
+              </p>
+            </div>
+            <div>
+          <h1 style="text-decoration: underline;">INSERT</h1>
+          <p>name: <input type="text" id="txt_name" /></p>
+          <p>courseld : <input type="number" id="txt_courseid" /></p>
+          <p>
+            <button type="button" onclick="fire_add()" class="btn btn-dark">
+              INSERT
+            </button>
+          </p>
+        </div>
+          <div>
+            <h1 style="text-decoration: underline;">UPDATE</h1>
+            <p>ID : <input type="number" id="txt_id_update" /></p>
+            <p>NAME : <input type="text" id="txt_name_update" /></p>
+            <p>Courseld : <input type="number" id="txt_courseid_update" /></p>
+            <p><button onclick="fire_update()" class="btn btn-dark">UPDATED</button></p>
+          </div>
+          <div>
+            <h1 style="text-decoration: underline;">DELETE</h1>
+            <p>ID : <input type="number" id="txt_id_del" /></p>
+            <p><button onclick="fire_delete()" class="btn btn-dark">DELETE</button></p>
+          </div>
+        </div>
+        
+        <div class="col-sm-9">
+            <table class="table table-dark table-hover">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Update At</th>
+                    <th>Name</th>
+                    <th>Date</th>
+                    <th>Courseid</th>
+                  </tr>
+                </thead>
+                <tbody id="data"></tbody>
+              </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<%-  -%>
+<table border="1">
+    <tr></tr>
+        <th>ID</th>
+        <th>Update At</th>
+        <th>Name</th>
+        <th>Date</th>
+        <th>courseid</th>
+    <tr></tr>
+    <% 
+for(var i = 0; i < tests.length; i++) {%>
+   <tr>
+     <td>
+        <%= tests[i].id%>
+     </td>
+     <td>
+        <%= tests[i].updateat%>
+     </td>     
+     <td>
+        <%= tests[i].name%>
+     </td>     
+     <td>
+        <%= tests[i].date%>
+     </td>     
+     <td>
+        <%= tests[i].courseid%>
+     </td>                    
+   </tr>
+<% } %>
+</table>
